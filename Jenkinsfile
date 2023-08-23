@@ -39,7 +39,7 @@ pipeline {
                 }
             }
         } 
-        stage('Push Docker Image'){
+        stage('Push Docker Image new'){
            steps {
                  withCredentials([usernamePassword(credentialsId: 'sunilbennur', passwordVariable: 'dockerhub', usernameVariable: 'sunilbennur')]) {
                      sh "docker login -u $sunilbennur --password $dockerhub"
